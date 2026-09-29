@@ -1,0 +1,23 @@
+{
+  "status": "BLOCKED",
+  "scenario_mode": "VERIFIED_ENGINEERING",
+  "simulation_allowed": false,
+  "reason": "Verified engineering breach section has not been supplied.",
+  "dam_reference": {
+    "pic": "TN12HH0005",
+    "latitude": 11.80305556029579,
+    "longitude": 77.80666667033081
+  },
+  "missing_parameters": [
+    "latitude",
+    "longitude",
+    "station_m",
+    "invert_elevation_m",
+    "crest_elevation_m",
+    "width_m",
+    "formation_time_hr"
+  ],
+  "solver": "NEERAKSH_2D_HLL",
+  "terrain": "C:\\NEERAKSH-1\\simulations\\inputs\\mettur\\mettur_hydraulic_domain_dem_30m.tif",
+  "fabricated_values_used": false
+}

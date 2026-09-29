@@ -1,0 +1,19 @@
+{
+  "model": "SPH",
+  "solver": "DualSPHysics",
+  "site": "Mettur",
+  "frames": 26,
+  "dt_seconds": 0.2,
+  "particles_per_frame": 5733,
+  "grid_dx_m": 10.0,
+  "grid_dy_m": 10.0,
+  "xmin_m": 0.0,
+  "xmax_m": 500.0,
+  "ymin_m": -50.0,
+  "ymax_m": 50.0,
+  "max_depth_m": 121.29750347137451,
+  "max_velocity_mps": 1.8326275447675981,
+  "arrival_time_min_s": 0.0,
+  "simulation_end_s": 5.0,
+  "note": "SPH particle-derived pilot products. Not a validated Mettur inundation forecast."
+}

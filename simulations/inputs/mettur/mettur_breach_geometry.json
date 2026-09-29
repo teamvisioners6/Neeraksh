@@ -1,0 +1,56 @@
+{
+  "project": "NEERAKSH",
+  "dam": {
+    "name": "Mettur Dam / Stanley Reservoir",
+    "dam_type": "Concrete Gravity",
+    "river": "Cauvery",
+    "state": "Tamil Nadu"
+  },
+  "status": "INCOMPLETE",
+  "breach_definition": {
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "source": null,
+      "source_type": null
+    },
+    "station_m": {
+      "value": null,
+      "reference": null,
+      "source": null
+    },
+    "invert_elevation_m": {
+      "value": null,
+      "datum": null,
+      "source": null,
+      "source_type": null
+    },
+    "crest_elevation_m": {
+      "value": null,
+      "datum": null,
+      "source": null
+    },
+    "breach_width_m": {
+      "value": null,
+      "source": null
+    },
+    "formation_time_hr": {
+      "value": null,
+      "source": null
+    },
+    "side_slope_h_to_v": {
+      "value": 0.0,
+      "source": "Concrete gravity screening assumption: vertical breach sides"
+    }
+  },
+  "validation_rules": {
+    "location_required": true,
+    "invert_required": true,
+    "crest_required": true,
+    "width_required": true,
+    "formation_time_required": true,
+    "source_required_for_engineering_parameters": true,
+    "fabricated_values_allowed": false
+  },
+  "created_at": "2026-09-25T03:58:39.212697+00:00"
+}

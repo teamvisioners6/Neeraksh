@@ -1,0 +1,19 @@
+NEERAKSH - METTUR HYDRAULIC DOMAIN
+============================================================
+Data sources
+- HydroRIVERS
+- CartoDEM 30 m
+
+Dam latitude=11.8030556
+Dam longitude=77.8066667
+Nearest HYRIV_ID=41370286
+MAIN_RIV=41376077
+Distance from dam=408.98387869080096 m
+Hydraulic domain buffer=10 km
+DEM rows=1620
+DEM columns=1440
+Valid cells=2312750
+Minimum elevation=-15.59729290008545
+Maximum elevation=1168.370361328125
+Mean elevation=236.84048461914062
+Median elevation=189.91058349609375

@@ -1,0 +1,55 @@
+{
+  "project": "NEERAKSH",
+  "scenario_policy": {
+    "rule_1": "Observed reservoir data must remain separate from hypothetical dam-break parameters.",
+    "rule_2": "Mettur breach parameters must not be fabricated.",
+    "rule_3": "Reference case-study parameters must never be labelled as Mettur parameters.",
+    "rule_4": "Every simulation parameter must contain provenance."
+  },
+  "scenario_types": {
+    "OFFICIAL_STUDY": {
+      "description": "Parameters obtained from an authoritative Mettur-specific dam-break study.",
+      "allowed_for_mettur": true,
+      "status": "WAITING_FOR_SOURCE"
+    },
+    "ENGINEERING_INPUT": {
+      "description": "Parameters entered by an authorized engineer or project operator.",
+      "allowed_for_mettur": true,
+      "required_provenance": true,
+      "status": "READY_FOR_INPUT"
+    },
+    "REFERENCE_CASE": {
+      "description": "Published dam-break case used to validate the NEERAKSH modelling pipeline.",
+      "allowed_for_mettur_prediction": false,
+      "allowed_for_pipeline_validation": true,
+      "status": "REFERENCE_ONLY"
+    }
+  },
+  "active_scenario": {
+    "scenario_type": null,
+    "scenario_id": null,
+    "dam": "Mettur Dam / Stanley Reservoir",
+    "failure_type": null,
+    "parameters": {},
+    "provenance": {},
+    "status": "NO_ACTIVE_BREACH_SCENARIO"
+  },
+  "reference_cases": {
+    "VARATTUPALLAM_CWC_2019": {
+      "name": "Varattupallam Dam Break Case Study",
+      "source_organization": "Central Water Commission",
+      "country": "India",
+      "purpose": "Hydraulic-model pipeline validation",
+      "allowed_use": [
+        "solver validation",
+        "hydrograph validation",
+        "inundation workflow validation"
+      ],
+      "not_allowed_use": [
+        "Mettur breach prediction",
+        "Mettur breach parameter substitution"
+      ]
+    }
+  },
+  "created_at": "2026-09-25T03:43:38.567311+00:00"
+}

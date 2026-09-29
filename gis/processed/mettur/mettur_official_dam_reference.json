@@ -1,0 +1,32 @@
+{
+  "source": {
+    "organization": "National Water Data Portal / NWIC",
+    "dataset": "DAM",
+    "pic": "TN12HH0005"
+  },
+  "dam": {
+    "name": "Mettur",
+    "district": "Salem",
+    "state": "Tamil Nadu",
+    "river": "Cauvery",
+    "height_m": 65.53,
+    "frl_m": 240.79,
+    "gross_storage_mcm": 2708.79,
+    "spillway_capacity": 12546.79,
+    "latitude": 11.8030555556,
+    "longitude": 77.8066666667
+  },
+  "geometry_validation": {
+    "geometry_type": "Point",
+    "geometry_latitude": 11.80305556029579,
+    "geometry_longitude": 77.80666667033081,
+    "distance_between_record_coordinate_and_geometry_m": 0.0006548400081547079
+  },
+  "important_limitations": [
+    "NWDP record provides a dam reference point, not a dam crest line.",
+    "NWDP dm_length is 0 in the Mettur record and is therefore not used.",
+    "The NWDP point is not interpreted as a breach location.",
+    "Breach location and breach invert remain engineering scenario inputs.",
+    "No breach geometry is inferred from the CartoDEM."
+  ]
+}

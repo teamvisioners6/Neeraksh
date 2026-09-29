@@ -1,0 +1,8 @@
+hydrorivers_source=C:\NEERAKSH-1\data\hydrosheds\hydrorivers\asia\HydroRIVERS_v10_as_shp\HydroRIVERS_v10_as.shp
+hydrorivers_features_in_search_area=117
+dam_latitude=11.8030556
+dam_longitude=77.8066667
+cartodem_candidate_latitude=11.747634
+cartodem_candidate_longitude=77.787641
+nearest_hydrorivers_distance_to_dam_km=0.40898387869080094
+nearest_hydrorivers_distance_to_cartodem_candidate_km=0.21187728428597521

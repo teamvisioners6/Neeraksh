@@ -1,0 +1,111 @@
+{
+  "project": "NEERAKSH",
+  "dam": "Mettur Dam",
+  "selected_scenario": {
+    "scenario_id": "METTUR_SCREENING_BASE",
+    "status": "ENGINEERING_SCREENING_ONLY",
+    "simulation_allowed": false,
+    "purpose": "Central engineering sensitivity case",
+    "dam": {
+      "name": "Mettur Dam",
+      "reservoir": "Stanley Reservoir",
+      "river": "Cauvery",
+      "state": "Tamil Nadu",
+      "district": "Salem",
+      "pic": "TN12HH0005",
+      "latitude": 11.8030555556,
+      "longitude": 77.8066666667,
+      "height_m": 65.53,
+      "frl_m": 240.79,
+      "mwl_m": 242.62,
+      "gross_storage_mcm": 2708.79,
+      "source": {
+        "organization": "National Water Data Portal / National Water Informatics Centre",
+        "dataset": "Official Dam Dataset",
+        "record": "TN12HH0005",
+        "note": "Official dam reference point and published dam attributes."
+      }
+    },
+    "observed_reservoir_state": {
+      "source": "Government of Tamil Nadu Reservoir Portal",
+      "status": "OBSERVED",
+      "water_level_ft": 83.07,
+      "storage_mcft": 45084.0,
+      "inflow_cusecs": 4960.0,
+      "outflow_cusecs": 12020.0,
+      "fetched_at": "2026-09-25T00:39:17.243128+00:00",
+      "important_note": "Observed reservoir values are not converted into a CWC hydraulic elevation because an independently verified vertical-datum transformation has not been established."
+    },
+    "cwc_reference": {
+      "organization": "Central Water Commission",
+      "document": "Sedimentation Assessment of Mettur / Stanley Reservoir through Remote Sensing",
+      "year": 2020,
+      "frl_m": 240.79,
+      "mddl_m": 219.456,
+      "dsl_m": 204.216,
+      "live_capacity_at_frl_mcm": 2150.553085,
+      "water_spread_at_frl_sqkm": 136.8,
+      "stage_storage_source": "CWC Table-3, SRS Survey 2019",
+      "note": "Official CWC reservoir elevation-capacity reference."
+    },
+    "failure": {
+      "mechanism": null,
+      "mechanism_status": "NOT_VERIFIED_FOR_METTUR",
+      "breach_location": {
+        "latitude": null,
+        "longitude": null,
+        "station_m": null,
+        "status": "NOT_PROVIDED"
+      },
+      "breach_invert_elevation_m": null,
+      "crest_elevation_m": null,
+      "breach_width_m": {
+        "screening_value": 484.62,
+        "fraction_of_cwc_crest_length": 0.3,
+        "status": "SCREENING_VALUE_ONLY"
+      },
+      "formation_time_hr": {
+        "screening_value": 0.3,
+        "status": "SCREENING_VALUE_ONLY"
+      },
+      "side_slope_h_to_v": {
+        "screening_value": 0.0,
+        "status": "SCREENING_VALUE_ONLY"
+      }
+    },
+    "hydraulic_initial_condition": {
+      "water_surface_elevation_m": null,
+      "status": "NOT_VERIFIED",
+      "reason": "Government gauge value has not been converted to a verified CWC hydraulic vertical datum."
+    },
+    "breach_hydrograph": {
+      "status": "NOT_GENERATED",
+      "reason": "No verified Mettur breach location, invert elevation and failure geometry are available."
+    },
+    "solver": {
+      "name": "NEERAKSH_2D_HLL",
+      "status": "READY_BUT_BLOCKED",
+      "execution_allowed": false
+    },
+    "provenance": {
+      "dam_reference": "NWDP/NWIC official dam dataset",
+      "reservoir_observation": "Government of Tamil Nadu reservoir portal",
+      "reservoir_geometry": "Government reservoir GIS dataset",
+      "dem": "ISRO/Bhoonidhi CartoDEM 30 m",
+      "river_network": "HydroRIVERS",
+      "stage_storage": "CWC Mettur sedimentation assessment, Table-3",
+      "breach_guidance": "USACE HEC-RAS concrete-gravity dam-breach guidance"
+    },
+    "fabricated_values": false,
+    "important": "Screening values are not represented as actual Mettur failure parameters."
+  },
+  "selection_policy": {
+    "selection_only": true,
+    "simulation_allowed": false,
+    "allow_fabricated_values": false,
+    "allow_unverified_breach_location": false,
+    "allow_unverified_hydraulic_initial_level": false,
+    "allow_screening_values_as_measured": false
+  },
+  "next_step": "Obtain verified engineering breach inputs before enabling numerical simulation."
+}

@@ -1,0 +1,62 @@
+{
+    "project": "NEERAKSH",
+    "created_at": "2026-09-25T08:20:44.494881+00:00",
+    "dam": {
+        "name": "Mettur Dam",
+        "reservoir": "Stanley Reservoir",
+        "river": "Cauvery",
+        "state": "Tamil Nadu",
+        "district": "Salem",
+        "pic": "TN12HH0005",
+        "official_reference": {
+            "latitude": 11.8030555556,
+            "longitude": 77.8066666667,
+            "source": "NWDP/NWIC Official Dam Dataset"
+        }
+    },
+    "scenario": {
+        "name": "METTUR_AUTOMATIC_HYPOTHETICAL",
+        "mode": "AUTOMATIC_HYPOTHETICAL",
+        "status": "READY",
+        "simulation_allowed": true,
+        "hypothetical": true,
+        "failure_prediction": false,
+        "fabricated_values": false
+    },
+    "failure": {
+        "mechanism": {
+            "value": "HYPOTHETICAL_DAM_BREAK",
+            "status": "SCENARIO_ONLY",
+            "verified": false
+        },
+        "breach_location": {
+            "latitude": 11.8030555556,
+            "longitude": 77.8066666667,
+            "location_type": "OFFICIAL_DAM_REFERENCE_POINT",
+            "status": "AUTOMATIC_SCENARIO_REFERENCE_ONLY",
+            "verified": false
+        },
+        "breach_geometry": {
+            "width_m": 484.62,
+            "formation_time_hr": 0.3,
+            "side_slope_h_to_v": 0.0,
+            "invert_elevation_m": null,
+            "crest_elevation_m": null,
+            "status": "SCREENING_SCENARIO_PARAMETERS",
+            "verified": false
+        }
+    },
+    "source": {
+        "dam_reference": "NWDP/NWIC Official Dam Dataset",
+        "screening_scenario": "METTUR_SCREENING_BASE",
+        "screening_source": "C:\\NEERAKSH-1\\simulations\\scenarios\\mettur\\mettur_source_bounded_scenarios.json"
+    },
+    "provenance": {
+        "official_dam_reference": true,
+        "screening_parameters": true,
+        "verified_breach_location": false,
+        "verified_breach_geometry": false,
+        "failure_prediction": false,
+        "disclaimer": "Automatic hypothetical dam-break scenario. The official Mettur dam reference coordinates are used only as the scenario reference point. Breach parameters are screening values and are not verified Mettur failure parameters. Results must not be interpreted as a prediction of actual dam failure."
+    }
+}

@@ -1,0 +1,240 @@
+{
+  "project": "NEERAKSH",
+  "dam": "Mettur Dam / Stanley Reservoir",
+  "created_at": "2026-09-25T03:54:21.772539+00:00",
+  "methodology": "Concrete gravity dam screening scenarios",
+  "important_notice": "These scenarios are engineering screening cases based on published concrete-gravity dam breach guidance. They are not measured Mettur failure parameters and do not predict that Mettur Dam will fail.",
+  "dam_length_m": 1615.44,
+  "dam_height_m": 65.53,
+  "breach_width_range_m": {
+    "minimum": 161.544,
+    "base": 484.632,
+    "maximum": 807.72
+  },
+  "formation_time_range_hr": {
+    "minimum": 0.1,
+    "base": 0.3,
+    "maximum": 0.5
+  },
+  "scenarios": [
+    {
+      "scenario_id": "METTUR_CG_LOW",
+      "dam": {
+        "name": "Mettur Dam / Stanley Reservoir",
+        "river": "Cauvery",
+        "state": "Tamil Nadu",
+        "dam_type": "Concrete Gravity",
+        "dam_length_m": 1615.44,
+        "dam_height_m": 65.53
+      },
+      "classification": {
+        "type": "ENGINEERING_SCREENING_SCENARIO",
+        "measured_mettur_breach_parameter": false,
+        "prediction_of_actual_failure": false,
+        "purpose": "Sensitivity analysis of potential concrete-gravity dam breach behaviour."
+      },
+      "failure": {
+        "mechanism": {
+          "value": "STRUCTURAL_GRAVITY_DAM_BREACH",
+          "source": "HEC-RAS concrete gravity dam breach guidance"
+        },
+        "breach_location": {
+          "latitude": null,
+          "longitude": null,
+          "source": "USER_SELECTED_ON_DAM_GEOMETRY"
+        },
+        "breach_width_m": {
+          "value": 161.544,
+          "source": "HEC-RAS concrete gravity screening range",
+          "measured": false
+        },
+        "formation_time_hr": {
+          "value": 0.1,
+          "source": "HEC-RAS concrete gravity screening range",
+          "measured": false
+        },
+        "side_slope_h_to_v": {
+          "value": 0.0,
+          "source": "HEC-RAS concrete gravity guidance",
+          "interpretation": "Vertical breach sides"
+        }
+      },
+      "reservoir_initial_condition": {
+        "level_ft": {
+          "value": 83.07,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        },
+        "storage_mcft": {
+          "value": 45084.0,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        },
+        "inflow_cusecs": {
+          "value": 4960.0,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        },
+        "outflow_cusecs": {
+          "value": 12020.0,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        }
+      },
+      "hydraulic_model": {
+        "equations": "2D full shallow-water equations",
+        "solver": "NEERAKSH_2D_HLL",
+        "terrain": "CartoDEM 30m",
+        "river_network": "HydroRIVERS",
+        "simulation_status": "WAITING_FOR_BREACH_LOCATION"
+      },
+      "description": "Lower structural breach screening case."
+    },
+    {
+      "scenario_id": "METTUR_CG_BASE",
+      "dam": {
+        "name": "Mettur Dam / Stanley Reservoir",
+        "river": "Cauvery",
+        "state": "Tamil Nadu",
+        "dam_type": "Concrete Gravity",
+        "dam_length_m": 1615.44,
+        "dam_height_m": 65.53
+      },
+      "classification": {
+        "type": "ENGINEERING_SCREENING_SCENARIO",
+        "measured_mettur_breach_parameter": false,
+        "prediction_of_actual_failure": false,
+        "purpose": "Sensitivity analysis of potential concrete-gravity dam breach behaviour."
+      },
+      "failure": {
+        "mechanism": {
+          "value": "STRUCTURAL_GRAVITY_DAM_BREACH",
+          "source": "HEC-RAS concrete gravity dam breach guidance"
+        },
+        "breach_location": {
+          "latitude": null,
+          "longitude": null,
+          "source": "USER_SELECTED_ON_DAM_GEOMETRY"
+        },
+        "breach_width_m": {
+          "value": 484.632,
+          "source": "HEC-RAS concrete gravity screening range",
+          "measured": false
+        },
+        "formation_time_hr": {
+          "value": 0.3,
+          "source": "HEC-RAS concrete gravity screening range",
+          "measured": false
+        },
+        "side_slope_h_to_v": {
+          "value": 0.0,
+          "source": "HEC-RAS concrete gravity guidance",
+          "interpretation": "Vertical breach sides"
+        }
+      },
+      "reservoir_initial_condition": {
+        "level_ft": {
+          "value": 83.07,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        },
+        "storage_mcft": {
+          "value": 45084.0,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        },
+        "inflow_cusecs": {
+          "value": 4960.0,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        },
+        "outflow_cusecs": {
+          "value": 12020.0,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        }
+      },
+      "hydraulic_model": {
+        "equations": "2D full shallow-water equations",
+        "solver": "NEERAKSH_2D_HLL",
+        "terrain": "CartoDEM 30m",
+        "river_network": "HydroRIVERS",
+        "simulation_status": "WAITING_FOR_BREACH_LOCATION"
+      },
+      "description": "Mid-range structural breach screening case."
+    },
+    {
+      "scenario_id": "METTUR_CG_HIGH",
+      "dam": {
+        "name": "Mettur Dam / Stanley Reservoir",
+        "river": "Cauvery",
+        "state": "Tamil Nadu",
+        "dam_type": "Concrete Gravity",
+        "dam_length_m": 1615.44,
+        "dam_height_m": 65.53
+      },
+      "classification": {
+        "type": "ENGINEERING_SCREENING_SCENARIO",
+        "measured_mettur_breach_parameter": false,
+        "prediction_of_actual_failure": false,
+        "purpose": "Sensitivity analysis of potential concrete-gravity dam breach behaviour."
+      },
+      "failure": {
+        "mechanism": {
+          "value": "STRUCTURAL_GRAVITY_DAM_BREACH",
+          "source": "HEC-RAS concrete gravity dam breach guidance"
+        },
+        "breach_location": {
+          "latitude": null,
+          "longitude": null,
+          "source": "USER_SELECTED_ON_DAM_GEOMETRY"
+        },
+        "breach_width_m": {
+          "value": 807.72,
+          "source": "HEC-RAS concrete gravity screening range",
+          "measured": false
+        },
+        "formation_time_hr": {
+          "value": 0.5,
+          "source": "HEC-RAS concrete gravity screening range",
+          "measured": false
+        },
+        "side_slope_h_to_v": {
+          "value": 0.0,
+          "source": "HEC-RAS concrete gravity guidance",
+          "interpretation": "Vertical breach sides"
+        }
+      },
+      "reservoir_initial_condition": {
+        "level_ft": {
+          "value": 83.07,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        },
+        "storage_mcft": {
+          "value": 45084.0,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        },
+        "inflow_cusecs": {
+          "value": 4960.0,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        },
+        "outflow_cusecs": {
+          "value": 12020.0,
+          "source": "Government of Tamil Nadu reservoir observation",
+          "observed": true
+        }
+      },
+      "hydraulic_model": {
+        "equations": "2D full shallow-water equations",
+        "solver": "NEERAKSH_2D_HLL",
+        "terrain": "CartoDEM 30m",
+        "river_network": "HydroRIVERS",
+        "simulation_status": "WAITING_FOR_BREACH_LOCATION"
+      },
+      "description": "Upper structural breach screening case."
+    }
+  ]
+}

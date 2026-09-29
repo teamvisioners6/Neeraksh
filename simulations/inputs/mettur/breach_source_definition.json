@@ -1,0 +1,37 @@
+{
+  "project": "NEERAKSH",
+  "dam": {
+    "pic": "TN12HH0005",
+    "name": "Mettur",
+    "river": "Cauvery",
+    "latitude": 11.8030555556,
+    "longitude": 77.8066666667
+  },
+  "source_type": "ENGINEERING_BREACH_SECTION",
+  "status": "WAITING_FOR_VERIFIED_SECTION",
+  "breach": {
+    "latitude": null,
+    "longitude": null,
+    "station_m": null,
+    "invert_elevation_m": null,
+    "crest_elevation_m": null,
+    "width_m": null,
+    "formation_time_hr": null,
+    "side_slope_h_to_v": 0.0
+  },
+  "provenance": {
+    "location_source": null,
+    "invert_source": null,
+    "crest_source": null,
+    "width_source": null,
+    "formation_time_source": null,
+    "methodology_source": null
+  },
+  "execution_policy": {
+    "allow_missing_parameters": false,
+    "allow_fabricated_values": false,
+    "allow_dam_reference_as_breach": false,
+    "require_parameter_provenance": true
+  },
+  "created_at": "2026-09-25T04:03:33.707288+00:00"
+}

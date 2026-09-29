@@ -1,0 +1,39 @@
+Part;TimeStep [s];Steps;DTsMin;PartRuntime [s];NpSave;NpSim;NpNew;NpOut;NctSim;NpAlloc [X];NctAlloc [X];SimRuntime [s];NpbSim;NpfSim;NpNormal;NpOutPos;NpOutRho;NpOutMov;DtMin [s];DtMax [s];MemCPU [MiB];MemGPU [MiB];MemGPU_Cells [MiB];NpAlloc;NctAlloc
+0;0;0;0;0.000000;46,354;46,354;0;0;1,044;1.002761;1.500000;0.000000;11,371;34,983;46,354;0;0;0;0;0;4.033527;6.625305;0.023933;46,482;1,566
+1;0.2040990805844749;44;0;0.062074;46,354;46,354;0;0;1,044;1.002761;1.500000;0.062074;11,371;34,983;46,354;0;0;0;0.004742196005980096;0.004762138581464884;4.033527;7.157249;0.023933;46,482;1,566
+2;0.4034683548006776;42;0;0.059193;46,354;46,354;0;0;1,044;1.002761;1.500000;0.123545;11,371;34,983;46,354;0;0;0;0.00474112503725228;0.00475193322032084;4.033527;7.157249;0.023933;46,482;1,566
+3;0.6029119100529836;42;0;0.057696;46,354;46,354;0;0;1,044;1.002761;1.500000;0.183627;11,371;34,983;46,354;0;0;0;0.004746435314386947;0.004751463385120436;4.033527;7.157249;0.023933;46,482;1,566
+4;0.8022879907337681;42;0;0.057431;46,354;46,354;0;0;1,044;1.002761;1.500000;0.242889;11,371;34,983;46,354;0;0;0;0.004743931701995005;0.004750782214546621;4.033527;7.157249;0.023933;46,482;1,566
+5;1.001473290831474;42;0;0.056999;46,354;46,354;0;0;1,044;1.002761;1.500000;0.301746;11,371;34,983;46,354;0;0;0;0.004741130654408575;0.004744176764201982;4.033527;7.157249;0.023933;46,482;1,566
+6;1.200811767880088;42;0;0.056088;46,354;46,354;0;0;1,044;1.002761;1.500000;0.360148;11,371;34,983;46,354;0;0;0;0.004744311932679194;0.00474798848081122;4.033527;7.157249;0.023933;46,482;1,566
+7;1.400220060422419;42;0;0.058150;46,354;46,354;0;0;1,044;1.002761;1.500000;0.420143;11,371;34,983;46,354;0;0;0;0.004747259400215422;0.004748535788097991;4.033527;7.157249;0.023933;46,482;1,566
+8;1.604414631866832;43;0;0.058356;46,354;46,354;0;0;1,044;1.002761;1.500000;0.480253;11,371;34,983;46,354;0;0;0;0.004746603405162225;0.004751076274058539;4.033527;7.157249;0.023933;46,482;1,566
+9;1.803896241018764;42;0;0.056886;46,354;46,354;0;0;1,044;1.002761;1.500000;0.538953;11,371;34,983;46,354;0;0;0;0.00474752875792827;0.004751572084018186;4.033527;7.157249;0.023933;46,482;1,566
+10;2.003174459895643;42;0;0.056973;46,354;46,354;0;0;1,044;1.002761;1.500000;0.598267;11,371;34,983;46,354;0;0;0;0.004742780388106049;0.004747352956362184;4.033527;7.157249;0.023933;46,482;1,566
+
+# Part:  Number of output file with particles data.
+# TimeStep [s]:  Physical time of simulation.
+# Steps:  Number of calculation steps since the previous PART.
+# DTsMin:  Number of times the Dt is updated with the minimum allowed value (can be 2 times per step when Symplectic is used).
+# PartRuntime [s]:  Runtime of last PART simulation.
+# NpSave:  Number of selected particles to save.
+# NpSim:  Number of particles used in simulation (normal + periodic particles).
+# NpNew:  Number of new fluid particles created by inlet conditions since the previous PART.
+# NpOut:  Number of excluded fluid particles since the previous PART.
+# NctSim:  Number of cells used in simulation for particle search.
+# NpAlloc [X]:  Over-allocation memory for particles NpAlloc/NpSim.
+# NctAlloc [X]:  Over-allocation memory for cells NctAlloc/NctSim.
+# SimRuntime [s]:  Total runtime of simulation (initialisation tasks not included).
+# NpbSim:  Number of fixed and moving particles (includes periodic particles).
+# NpfSim:  Number of fluid and floating particles (includes periodic particles).
+# NpNormal:  Total number of particles without periodic particles.
+# NpOutPos:  Number of excluded particles due to invalid position.
+# NpOutRho:  Number of excluded particles due to invalid density.
+# NpOutMov:  Number of excluded particles due to invalid movement.
+# DtMin [s]:  Minimum value of Dt since the previous PART.
+# DtMax [s]:  Maximum value of Dt since the previous PART.
+# MemCPU [MiB]:  Current CPU memory allocated (only includes the most memory intensive objects).
+# MemGPU [MiB]:  Current GPU memory allocated (only includes the most memory intensive objects).
+# MemGPU_Cells [MiB]:  Current GPU memory allocated for cells according to NctAlloc.
+# NpAlloc:  Number of supported particles with memory allocated.
+# NctAlloc:  Number of supported cells with memory allocated.

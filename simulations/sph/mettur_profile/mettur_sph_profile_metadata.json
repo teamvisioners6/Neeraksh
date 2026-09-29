@@ -1,0 +1,30 @@
+{
+  "project": "NEERAKSH",
+  "model": "SPH (DualSPHysics)",
+  "purpose": "Mettur downstream 2D longitudinal SPH pilot",
+  "status": "PILOT_PREPARATION",
+  "not_a_flood_forecast": true,
+  "not_a_verified_breach_location": true,
+  "mettur_reference": {
+    "lat": 11.8030555556,
+    "lon": 77.8066666667
+  },
+  "cwc_initial_wse_m": 233.493766515,
+  "dem": "C:\\NEERAKSH-1\\data\\dem\\mettur\\mettur_correct_dem_30m.tif",
+  "hydrorivers": "C:\\NEERAKSH-1\\data\\hydrosheds\\hydrorivers\\asia\\HydroRIVERS_v10_as_shp\\HydroRIVERS_v10_as.shp",
+  "nearest_hyriv_id": 41370286,
+  "downstream_reaches": [
+    41370286
+  ],
+  "profile_length_m": 3000.0,
+  "sample_step_m": 30.0,
+  "particle_spacing_m": 10.0,
+  "base_elevation_m": 98.64461517333984,
+  "raw_dem_elevation_min_m": 100.64461517333984,
+  "raw_dem_elevation_max_m": 186.86767578125,
+  "relative_wse_m": 134.84915134166016,
+  "outputs": {
+    "bathymetry_csv": "C:\\NEERAKSH-1\\simulations\\sph\\mettur_profile\\mettur_sph_bathymetry.csv",
+    "definition_xml": "C:\\NEERAKSH-1\\simulations\\sph\\mettur_profile\\MetturSPH2D_Def.xml"
+  }
+}

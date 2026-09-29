@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<case app="GenCase v5.4.354.01 (07-04-2025)" date="28-09-2026 10:19:28">
+    <casedef>
+        <constantsdef>
+            <gravity x="0" y="0" z="-9.81" comment="Gravitational acceleration" units_comment="m/s^2" />
+            <rhop0 value="1000" comment="Reference density" units_comment="kg/m^3" />
+            <rhopgradient value="2" />
+            <hswl value="134.849151" auto="false" />
+            <gamma value="7" />
+            <speedsystem value="0" auto="true" />
+            <coefsound value="20" />
+            <speedsound value="0" auto="true" />
+            <coefh value="1.0" />
+            <_hdp value="2" />
+            <cflnumber value="0.2" />
+        </constantsdef>
+        <mkconfig boundcount="240" fluidcount="9" />
+        <geometry>
+            <definition dp="10.0" units_comment="metres (m)">
+                <pointref x="0" y="0" z="0" />
+                <pointmin x="-10" y="-100" z="-10" />
+                <pointmax x="3010" y="100" z="144.849151" />
+            </definition>
+            <commands>
+                <mainlist>
+                    <!-- =============================================== -->
+                    <!-- Mettur DEM-derived bed -->
+                    <!-- =============================================== -->
+                    <setdrawmode mode="full" />
+                    <setmkbound mk="0" />
+                    <drawfilecsv file="mettur_sph_bathymetry.csv" mode="bathymetry" />
+                    <!-- =============================================== -->
+                    <!-- INITIAL RESERVOIR / WATER -->
+                    <!-- 0 to 500 m only -->
+                    <!-- =============================================== -->
+                    <setmkfluid mk="0" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0" y="-50" z="0" />
+                        <size x="500" y="100" z="134.849151" />
+                    </drawbox>
+                    <!-- =============================================== -->
+                    <!-- CHANNEL SIDE + BED BOUNDARIES -->
+                    <!-- =============================================== -->
+                    <setmkbound mk="0" />
+                    <drawbox>
+                        <boxfill>bottom | left | right | front | back</boxfill>
+                        <point x="0" y="-50" z="0" />
+                        <size x="3000" y="100" z="134.849151" />
+                    </drawbox>
+                    <!-- =============================================== -->
+                    <!-- BREACH / DAM WALL -->
+                    <!-- =============================================== -->
+                    <!--
+                         The wall is placed at x=500 m.
+                         The opening is the full 100 m channel width.
+                         This is an instantaneous pilot breach.
+                    -->
+                    <setmkbound mk="0" />
+                    <drawbox>
+                        <boxfill>left | right | front | back | bottom</boxfill>
+                        <point x="500" y="-50" z="0" />
+                        <size x="10" y="100" z="134.849151" />
+                    </drawbox>
+                    <!-- =============================================== -->
+                    <!-- BREACH OPENING -->
+                    <!-- =============================================== -->
+                    <!--
+                         Remove the central dam section by creating
+                         the downstream domain after the dam.
+                         The pilot opening will be represented by
+                         the absence of a transverse wall in the
+                         flow path during the simulation.
+                    -->
+                    <shapeout file="MetturSPH2D" reset="true" />
+                </mainlist>
+            </commands>
+        </geometry>
+    </casedef>
+    <execution>
+        <parameters>
+            <parameter key="SavePosDouble" value="0" />
+            <parameter key="StepAlgorithm" value="1" />
+            <parameter key="VerletSteps" value="40" />
+            <parameter key="Kernel" value="2" />
+            <parameter key="ViscoTreatment" value="1" />
+            <parameter key="Visco" value="0.02" />
+            <parameter key="ViscoBoundFactor" value="1" />
+            <parameter key="DensityDT" value="2" />
+            <parameter key="DensityDTvalue" value="0.1" />
+            <parameter key="Shifting" value="0" />
+            <parameter key="ShiftCoef" value="-2" />
+            <parameter key="ShiftTFS" value="0" />
+            <parameter key="RigidAlgorithm" value="1" />
+            <parameter key="FtPause" value="0.0" />
+            <parameter key="CoefDtMin" value="0.05" />
+            <parameter key="DtIni" value="0" />
+            <parameter key="DtMin" value="0" />
+            <parameter key="DtFixed" value="0" />
+            <parameter key="DtFixedFile" value="NONE" />
+            <parameter key="DtAllParticles" value="0" />
+            <parameter key="TimeMax" value="5.0" units_comment="seconds" />
+            <parameter key="TimeOut" value="0.2" units_comment="seconds" />
+            <parameter key="PartsOutMax" value="1" comment="**DEPRECATED** " />
+            <parameter key="RhopOutMin" value="700" />
+            <parameter key="RhopOutMax" value="1300" />
+            <simulationdomain comment="Defines domain of simulation (default=Uses minimum and maximum position of the generated particles)">
+                <posmin x="default" y="default" z="default" comment="e.g.: x=0.5, y=default-1, z=default-10%" />
+                <posmax x="default" y="default" z="default + 50%" />
+            </simulationdomain>
+        </parameters>
+        <particles np="17956" nb="12223" nbf="12223" mkboundfirst="10" mkfluidfirst="1">
+            <_summary>
+                <positions units_comment="metres (m)">
+                    <posmin x="0" y="-50" z="0" />
+                    <posmax x="3000" y="50" z="130" />
+                </positions>
+                <fixed count="12223" id="0-12222" mkcount="1" mkvalues="10" />
+                <fluid count="5733" id="12223-17955" mkcount="1" mkvalues="1" />
+            </_summary>
+            <fixed mkbound="0" mk="10" begin="0" count="12223" />
+            <fluid mkfluid="0" mk="1" begin="12223" count="5733" />
+        </particles>
+        <constants>
+            <data2d value="false" />
+            <gravity x="0" y="0" z="-9.81" units_comment="m/s^2" />
+            <cflnumber value="0.2" />
+            <gamma value="7" />
+            <rhop0 value="1000" units_comment="kg/m^3" />
+            <dp value="10" units_comment="metres (m)" />
+            <h value="17.320508076" units_comment="metres (m)" />
+            <b value="75592581.218" units_comment="Pascal (Pa)" />
+            <massbound value="1000000" units_comment="kg" />
+            <massfluid value="1000000" units_comment="kg" />
+        </constants>
+        <uservars>
+            <varnum name="VResId" value="0" />
+        </uservars>
+        <motion />
+        <vtkout mkboundfirst="10" mkfluidfirst="1">
+            <vtkfile name="MetturSPH2D_out_MetturSPH2D_Actual.vtk" mk="10" mkbound="0" />
+        </vtkout>
+    </execution>
+</case>

@@ -1,0 +1,104 @@
+{
+  "project": "NEERAKSH",
+  "scenario_id": "METTUR_BREACH_ENGINEERING_001",
+  "dam": {
+    "name": "Mettur Dam / Stanley Reservoir",
+    "river": "Cauvery",
+    "state": "Tamil Nadu",
+    "latitude": 11.8030556,
+    "longitude": 77.8066667
+  },
+  "scenario_type": "ENGINEERING_INPUT",
+  "status": "NOT_READY_FOR_SIMULATION",
+  "failure": {
+    "mechanism": {
+      "value": null,
+      "allowed": [
+        "overtopping",
+        "piping",
+        "structural_failure",
+        "user_defined"
+      ],
+      "source": null
+    },
+    "breach_location": {
+      "latitude": null,
+      "longitude": null,
+      "chainage_m": null,
+      "source": null
+    },
+    "breach_width_m": {
+      "value": null,
+      "source": null,
+      "provenance": null
+    },
+    "formation_time_hr": {
+      "value": null,
+      "source": null,
+      "provenance": null
+    },
+    "side_slope_h_to_v": {
+      "value": null,
+      "source": null,
+      "provenance": null
+    }
+  },
+  "reservoir_initial_condition": {
+    "level_ft": {
+      "value": null,
+      "source": null,
+      "observed": false
+    },
+    "storage_mcft": {
+      "value": null,
+      "source": null,
+      "observed": false
+    },
+    "inflow_cusecs": {
+      "value": null,
+      "source": null,
+      "observed": false
+    },
+    "outflow_cusecs": {
+      "value": null,
+      "source": null,
+      "observed": false
+    }
+  },
+  "hydraulic_model": {
+    "terrain": "C:\\NEERAKSH-1\\simulations\\inputs\\mettur\\mettur_hydraulic_domain_dem_30m.tif",
+    "river_network": "C:\\NEERAKSH-1\\simulations\\inputs\\mettur\\mettur_main_hydrorivers.gpkg",
+    "hydraulic_domain": "C:\\NEERAKSH-1\\simulations\\inputs\\mettur\\mettur_hydraulic_domain.gpkg",
+    "target_equations": [
+      "2D shallow-water equations"
+    ],
+    "delft3d": {
+      "required_by_problem_statement": true,
+      "status": "INTEGRATION_PENDING",
+      "executed": false
+    },
+    "sph": {
+      "required_by_problem_statement": true,
+      "status": "INTEGRATION_PENDING",
+      "executed": false
+    }
+  },
+  "outputs": {
+    "required": [
+      "breach_outflow_hydrograph",
+      "water_depth",
+      "water_surface_elevation",
+      "velocity",
+      "arrival_time",
+      "maximum_inundation_extent",
+      "shp",
+      "kml"
+    ]
+  },
+  "validation": {
+    "all_parameters_require_provenance": true,
+    "fabricated_values_allowed": false,
+    "simulation_allowed_when_parameters_missing": false
+  },
+  "created_at": "2026-09-25T03:47:14.015856+00:00"
+}
